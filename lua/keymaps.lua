@@ -1,9 +1,24 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Save document with <C-s>
+vim.keymap.set('n', '<C-s>', '<cmd>write<CR>', { desc = 'Save document' })
+-- in insert mode, save with <C-s> and exit insert mode
+vim.keymap.set('i', '<C-s>', '<cmd>write<CR><cmd>stopinsert<CR>', { desc = 'Save document and exit insert mode' })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Open a terminal with <leader>a (a for alacritty)
+vim.keymap.set('n', '<leader>a', '<cmd>!alacritty&<CR>')
+
+-- ChatGpt
+vim.keymap.set('n', '<M-l>', '<cmd>ChatGPT<CR>')
+vim.keymap.set('n', '<M-k>', '<cmd>ChatGPTEditWithInstructions<CR>')
+
+-- Fine Command Line
+-- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
