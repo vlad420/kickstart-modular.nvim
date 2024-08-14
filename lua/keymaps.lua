@@ -10,16 +10,6 @@ vim.keymap.set('i', '<C-s>', '<cmd>write<CR><cmd>stopinsert<CR>', { desc = 'Save
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Open a terminal with <leader>a (a for alacritty)
-vim.keymap.set('n', '<leader>a', '<cmd>!alacritty&<CR>')
-
--- ChatGpt
-vim.keymap.set('n', '<M-l>', '<cmd>ChatGPT<CR>')
-vim.keymap.set('n', '<M-k>', '<cmd>ChatGPTEditWithInstructions<CR>')
-
--- Fine Command Line
--- vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', { noremap = true })
-
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
