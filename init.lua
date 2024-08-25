@@ -98,6 +98,7 @@ require 'custom.commands'
 
 -- [[ Setting options ]]
 require 'options'
+require 'custom.options'
 
 -- [[ Basic Keymaps ]]
 require 'keymaps'
