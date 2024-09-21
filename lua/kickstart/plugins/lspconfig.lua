@@ -169,7 +169,7 @@ return {
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {},
         tailwindcss = {},
-        --
+        eslint = {},
 
         lua_ls = {
           -- cmd = {...},
