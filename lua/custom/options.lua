@@ -7,4 +7,6 @@ if vim.loop.os_uname().sysname == 'Windows_NT' then
   vim.o.shellquote = ''
   vim.o.shellxquote = ''
 end
-
+-- vim.opt.textwidth = 80
+vim.opt.wrap = false
+vim.opt.colorcolumn = '80'
